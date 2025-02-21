@@ -55,8 +55,9 @@ agent = OpenAIAgent.from_tools(
 
 
 while True:
-    question = input("\nBạn có câu hỏi gì không? ")
+    question = input("\n> ")
     if question == "exit":
         break
     response = agent.stream_chat(question)
     response.print_response_stream()
+    print("\n" + "=" * 20)
